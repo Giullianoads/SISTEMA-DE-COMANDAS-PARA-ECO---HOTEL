@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Hotel Pesqueiro</title>
+    <link rel="stylesheet" href="/CSS/Login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-section">
+            <div class="logo"></div>
+            <h1 class="hotel-name">ITAJU ECO - HOTEL</h1>
+            <p class="hotel-subtitle">Sistema de Comanda</p>
+        </div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="usuario">Usuário</label>
+                <input 
+                    type="text" 
+                    id="usuario" 
+                    name="usuario" 
+                    placeholder="Digite seu usuário" 
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input 
+                    type="password" 
+                    id="senha" 
+                    name="senha" 
+                    placeholder="Digite sua senha" 
+                    required
+                >
+            </div>
+
+            <div class="login-options">
+                <label class="remember-me">
+                    <input type="checkbox" id="lembrar">
+                    Lembrar-me
+                </label>
+                <a href="/HTML/Esqueci_minha_senha.html" class="forgot-password">Esqueci a senha</a>
+            </div>
+
+            <button type="submit" class="login-btn" >
+                <a href="/HTML/telaprincipal.html">Entrar no Sistema</a>
+            </button>
+        </form>
+
+        <div class="divider">
+            <span>ou</span>
+        </div>
+
+        <div class="register-link">
+            <p>Não tem uma conta? <a href="/HTML/Cadastro.html">Cadastre-se aqui</a></p>
+        </div>
+    </div>
+
+    <script src="/JAVASCRIPT/Login.js"></script>
+</body>
+</html>

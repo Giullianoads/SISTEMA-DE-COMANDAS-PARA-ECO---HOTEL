@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Quarto - EcoPantanal</title>
+    <link rel="stylesheet" href="/CSS/quarto.css">
+</head>
+<body>
+    <div class="container-quarto">
+        <div class="header-quarto">
+            <div class="nome-quarto" id="roomName">QUARTO ###</div>
+        </div>
+        
+        <div class="menu-quarto">
+            <button type="button" class="menu-btn" onclick="window.location.href='/HTML/pedidos.html'">
+            FAZER PEDIDOS
+            </button>
+
+            <button class="menu-btn" id="contaBtn">FECHAMENTO DE CONTA</button>
+        </div>
+        
+        <div class="relatorio-quarto">
+            <h2>Relatório de Consumo</h2>
+            <div class="consumo-container" id="consumoChart"></div>
+            <div class="itens-consumo">
+                <!-- Itens serão preenchidos via JavaScript -->
+            </div>
+        </div>
+
+        <div class="footer-quarto">
+            <button type="button" class="menu-btn" onclick="window.location.href='/HTML/telaprincipal.html'">
+            VOLTAR AO INÍCIO
+            </button>
+        </div>
+    </div>
+    <script src="/JAVASCRIPT/Modal.js"></script>
+    <script src="/JAVASCRIPT/quarto.js"></script>
+    <script src="/JAVASCRIPT/func.js"></script>
+</body>
+</html>

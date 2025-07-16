@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha - Hotel Pesqueiro</title>
+    <link rel="stylesheet" href="/CSS/Esqueci_minha_senha.css">
+</head>
+<body>
+    <div class="forgot-container">
+        <div class="logo-section">
+            <div class="logo"></div>
+            <h1 class="hotel-name">Pesqueiro Vista Azul</h1>
+            <p class="hotel-subtitle">Recuperação de Senha</p>
+        </div>
+
+        <div class="info-section">
+            <h2>Esqueceu sua senha?</h2>
+            <p>Não se preocupe! Digite seu email ou usuário abaixo e enviaremos instruções para redefinir sua senha.</p>
+        </div>
+
+        <form id="forgotForm">
+            <div class="form-group">
+                <label for="email">Email ou Usuário</label>
+                <input 
+                    type="text" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Digite seu email ou usuário" 
+                    required
+                >
+            </div>
+
+            <button type="submit" class="recover-btn">
+                Enviar Instruções
+            </button>
+        </form>
+
+        <div class="back-to-login">
+            <p>Lembrou da senha? <a href="login.html" class="back-link">Voltar ao login</a></p>
+        </div>
+
+        <div class="help-section">
+            <p class="help-text">
+                <strong>Dica:</strong> Verifique sua caixa de spam se não receber o email em alguns minutos.
+            </p>
+        </div>
+    </div>
+
+    <script src="/JAVASCRIPT/Esqueci_minha_senha.js"></script>
+</body>
+</html>

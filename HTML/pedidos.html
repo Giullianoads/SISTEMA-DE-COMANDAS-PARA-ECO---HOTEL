@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pedidos - Itaju Eco Hotel</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="../CSS/pedidos.css" rel="stylesheet" /><script defer src="../JAVASCRIPT/pedidos.js"></script></head>
+<body class="bg-cream min-h-screen">
+<!-- Header -->
+<header class="bg-brown-dark text-white shadow-lg">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+  
+<div class="container mx-auto px-4 py-4">
+<div class="flex items-center justify-between">
+<button class="flex items-center space-x-2 hover:text-gold transition-colors" onclick="goBack()">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Voltar</span>
+</button>
+<h1 class="text-2xl font-bold text-center flex-1">
+            Pedido - Itaju Eco Hotel
+          </h1>
+<div class="w-20"></div>
+
+<!-- Spacer for centering -->
+</div>
+</div>
+</header>
+<!-- Alert Banner -->
+<div class="bg-gold text-brown-dark py-3">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-center space-x-2">
+<span class="font-semibold">Faça seu pedido abaixo!</span>
+</div>
+</div>
+</div>
+<div class="container mx-auto px-4 py-6">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Menu Items -->
+<div class="lg:col-span-2 space-y-8">
+  <!-- Navegação por Seções (com botões estilizados) -->
+<nav class="bg-cream sticky top-0 z-30 shadow-md">
+  <div class="container mx-auto px-4 py-4 flex flex-wrap justify-center gap-4">
+    <a href="#bebidas" class="bg-white text-brown-dark border border-gold font-semibold px-5 py-2 rounded-full shadow hover:bg-gold hover:text-white transition duration-300">
+      🍹 Bebidas
+    </a>
+    <a href="#porcoes" class="bg-white text-brown-dark border border-gold font-semibold px-5 py-2 rounded-full shadow hover:bg-gold hover:text-white transition duration-300">
+      🍽️ Porções
+    </a>
+    <a href="#pescaria" class="bg-white text-brown-dark border border-gold font-semibold px-5 py-2 rounded-full shadow hover:bg-gold hover:text-white transition duration-300">
+      🎣 Pescaria
+    </a>
+  </div>
+</nav>
+
+<!-- Bebidas Section -->
+<section id="bebidas" class="bg-white rounded-lg shadow-md p-6">
+<div class="flex items-center space-x-3 mb-6">
+<img alt="Ícone de Bebidas" class="w-8 h-8" src="../ICONS/bebidas.svg"/>
+<h2 class="text-2xl font-bold text-brown-dark">Bebidas</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="menu-item" data-image="../Imagens/agua.png" data-name="Água" data-price="4.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Água" class="w-12 h-12 object-cover rounded" src="../Imagens/agua.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">Água</h3>
+<p class="text-gold font-bold">R$ 4,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/refrigerante.png" data-name="Refrigerante" data-price="6.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Refrigerante" class="w-12 h-12 object-cover rounded" src="../Imagens/refrigerante.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Refrigerante
+                      </h3>
+<p class="text-gold font-bold">R$ 6,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/suco.png" data-name="Suco - 900ml" data-price="20.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Suco" class="w-12 h-12 object-cover rounded" src="../Imagens/suco.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Suco - 600ml
+                      </h3>
+<p class="text-gold font-bold">R$ 20,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/cerveja600.png" data-name="Cerveja - 600ml" data-price="13.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Cerveja" class="w-12 h-12 object-cover rounded" src="../Imagens/cerveja600.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Cerveja - 600ml
+                      </h3>
+<p class="text-gold font-bold">R$ 13,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/cervejaZero.png" data-name="Cerveja Zero" data-price="10.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Cerveja" class="w-12 h-12 object-cover rounded" src="../Imagens/cervejaZero.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Cerveja Zero
+                      </h3>
+<p class="text-gold font-bold">R$ 10,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/heineken600.png" data-name="Heineken - 600ml" data-price="18.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Cerveja" class="w-12 h-12 object-cover rounded" src="../Imagens/heineken600.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Heineken - 600ml
+                      </h3>
+<p class="text-gold font-bold">R$ 18,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/gin.png" data-name="Gin" data-price="22.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Cerveja" class="w-12 h-12 object-cover rounded" src="../Imagens/gin.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">Gin</h3>
+<p class="text-gold font-bold">R$ 22,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/campari.png" data-name="Campari" data-price="25.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Cerveja" class="w-12 h-12 object-cover rounded" src="../Imagens/campari.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">Campari</h3>
+<p class="text-gold font-bold">R$ 25,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/geloBarra.png" data-name="Gelo Barra" data-price="25.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Gelo" class="w-12 h-12 object-cover rounded" src="../Imagens/geloBarra.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">Gelo Barra</h3>
+<p class="text-gold font-bold">R$ 25,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Refeições Section -->
+<section id="porcoes" class="bg-white rounded-lg shadow-md p-6">
+<div class="flex items-center space-x-3 mb-6">
+<img alt="Ícone de Refeições" class="w-8 h-8" src="../ICONS/refeicoes.svg"/>
+<h2 class="text-2xl font-bold text-brown-dark">Porções</h2>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<div class="menu-item" data-image="../Imagens/bauru.png" data-name="Bauru" data-price="10.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Bauru" class="w-12 h-12 object-cover rounded" src="../Imagens/bauru.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">Bauru</h3>
+<p class="text-gold font-bold">R$ 10,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/batata_frita.png" data-name="Batata Frita" data-price="40.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Batata Frita" class="w-12 h-12 object-cover rounded" src="../Imagens/batata_frita.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Batata Frita
+                      </h3>
+<p class="text-gold font-bold">R$ 40,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/frango_passarinho.png" data-name="Frango à Passarinho" data-price="50.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Frango à Passarinho" class="w-12 h-12 object-cover rounded" src="../Imagens/frango_passarinho.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Frango à Passarinho
+                      </h3>
+<p class="text-gold font-bold">R$ 50,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/calabresa_acebolada.png" data-name="Calabresa à Cebolada" data-price="50.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Calabresa à Cebolada" class="w-12 h-12 object-cover rounded" src="../Imagens/calabresa_acebolada.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Calabresa Acebolada
+                      </h3>
+<p class="text-gold font-bold">R$ 50,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/sashimi_pantaneiro.png" data-name="Sashimi Pantaneiro" data-price="60.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Sashimi Pantaneiro" class="w-12 h-12 object-cover rounded" src="../Imagens/sashimi_pantaneiro.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Sashimi Pantaneiro
+                      </h3>
+<p class="text-gold font-bold">R$ 60,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/costela_pacu.png" data-name="Costela de Pacu" data-price="60.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Costela de Pacu" class="w-12 h-12 object-cover rounded" src="../Imagens/costela_pacu.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Costela de Pacu
+                      </h3>
+<p class="text-gold font-bold">R$ 60,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/isca_peixe.png" data-name="Isca de Peixe" data-price="60.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Isca de Peixe" class="w-12 h-12 object-cover rounded" src="../Imagens/isca_peixe.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Isca de Peixe
+                      </h3>
+<p class="text-gold font-bold">R$ 60,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/lambari.png" data-name="Lambari" data-price="60.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Lambari" class="w-12 h-12 object-cover rounded" src="../Imagens/lambari.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">Lambari</h3>
+<p class="text-gold font-bold">R$ 60,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pescaria Section -->
+<section id="pescaria" class="bg-white rounded-lg shadow-md p-6">
+<div class="flex items-center space-x-3 mb-6">
+<img alt="Ícone de Pescaria" class="w-8 h-8" src="../ICONS/pescaria.svg"/>
+<h2 class="text-2xl font-bold text-brown-dark">
+                Serviços de Pescaria
+              </h2>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<div class="menu-item" data-image="../Imagens/barco_completo.png" data-name="Barco completo (3 pessoas)" data-price="900.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Barco completo" class="w-12 h-12 object-cover rounded" src="../Imagens/barco_completo.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Barco completo (3 pessoas)
+                      </h3>
+<p class="text-gold font-bold">R$ 900,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/barco_semi_chata.png" data-name="Barco semi chata" data-price="850.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Barco semi chata" class="w-12 h-12 object-cover rounded" src="../Imagens/barco_semi_chata.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Barco semi chata
+                      </h3>
+<p class="text-gold font-bold">R$ 850,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/piloteiro.png" data-name="Diária piloteiro" data-price="200.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Piloteiro" class="w-12 h-12 object-cover rounded" src="../Imagens/piloteiro.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Diária piloteiro
+                      </h3>
+<p class="text-gold font-bold">R$ 200,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/pescaria_caiaque.png" data-name="Pescaria caiaque" data-price="300.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Pescaria caiaque" class="w-12 h-12 object-cover rounded" src="../Imagens/pescaria_caiaque.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Pescaria caiaque
+                      </h3>
+<p class="text-gold font-bold">R$ 300,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/aluguel_caiaque.png" data-name="Aluguel caiaque" data-price="150.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Aluguel caiaque" class="w-12 h-12 object-cover rounded" src="../Imagens/aluguel_caiaque.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Aluguel caiaque
+                      </h3>
+<p class="text-gold font-bold">R$ 150,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/descedor_barco.png" data-name="Descedor de barco" data-price="40.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Descedor de barco" class="w-12 h-12 object-cover rounded" src="../Imagens/descedor_barco.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Descedor de barco
+                      </h3>
+<p class="text-gold font-bold">R$ 40,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/descedor_pessoa.png" data-name="Descedor por pessoa" data-price="30.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Descedor por pessoa" class="w-12 h-12 object-cover rounded" src="../Imagens/descedor_pessoa.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">
+                        Descedor por pessoa
+                      </h3>
+<p class="text-gold font-bold">R$ 30,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+<div class="menu-item" data-image="../Imagens/barranco.png" data-name="Barranco" data-price="30.00">
+<div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+<div class="flex items-center space-x-3">
+<img alt="Barranco" class="w-12 h-12 object-cover rounded" src="../Imagens/barranco.png"/>
+<div>
+<h3 class="font-semibold text-brown-dark">Barranco</h3>
+<p class="text-gold font-bold">R$ 30,00</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="qty-btn-minus bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                      -
+                    </button>
+<span class="qty-display w-8 text-center font-semibold">0</span>
+<button class="qty-btn-plus bg-gold hover:bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      +
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Cart Sidebar -->
+<div class="lg:col-span-1">
+<div class="bg-white rounded-lg shadow-md p-6 sticky top-6">
+<h3 class="text-xl font-bold text-brown-dark mb-4 flex items-center">
+<div>
+  <img alt="Ícone de Pescaria" class="w-8 h-8" src="../ICONS/receita.svg"/>
+</div>
+              Resumo do Pedido
+            </h3>
+<!-- Cart Items -->
+<div class="space-y-3 mb-4 max-h-60 overflow-y-auto" id="cart-items">
+<div class="text-gray-500 text-center py-4">
+                Nenhum item adicionado
+              </div>
+</div>
+<!-- Observations -->
+<div class="mb-4">
+<label class="block text-sm font-semibold text-brown-dark mb-2" for="observations">Observações adicionais:</label>
+<textarea class="w-full p-3 border border-gray-300 rounded-lg resize-none focus:ring-2 focus:ring-gold focus:border-transparent" id="observations" placeholder="Observações especiais..." rows="3"></textarea>
+</div>
+<!-- Total -->
+<div class="border-t pt-4">
+<div class="flex justify-between items-center text-lg font-bold text-brown-dark mb-4">
+<span>Total:</span>
+<span class="text-gold" id="cart-total">R$ 0,00</span>
+</div>
+<!-- Action Buttons -->
+<div class="space-y-2">
+<button class="w-full py-2 px-4 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors" id="clear-cart">
+                  Limpar Carrinho
+                </button>
+<button class="w-full py-3 px-4 bg-brown-dark text-white rounded-lg hover:bg-opacity-90 transition-colors font-semibold disabled:opacity-50 disabled:cursor-not-allowed" id="finish-order">
+                  Anotar Pedido
+                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal for Order Confirmation -->
+<div class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4" id="order-modal">
+<div class="bg-white rounded-lg max-w-md w-full p-6">
+<div class="text-center mb-4">
+<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-xl font-bold text-brown-dark mb-2">
+            Pedido Enviado!
+          </h3>
+<p class="text-gray-600">Seu pedido foi registrado com sucesso.</p>
+</div>
+<div class="bg-gray-50 rounded-lg p-4 mb-4" id="order-summary">
+<!-- Order summary will be populated here -->
+</div>
+<button class="w-full py-2 px-4 bg-brown-dark text-white rounded-lg hover:bg-opacity-90 transition-colors" id="close-modal">
+          Fechar
+        </button>
+</div>
+</div>
+<!-- Alert Modal -->
+<div class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4" id="alert-modal">
+<div class="bg-white rounded-lg max-w-sm w-full p-6 text-center">
+<h3 class="text-xl font-bold text-brown-dark mb-2">Aviso</h3>
+<p class="text-gray-700 mb-4" id="alert-modal-message">
+          Mensagem genérica
+        </p>
+<button class="bg-brown-dark text-white px-4 py-2 rounded hover:bg-opacity-90" onclick="closeAlertModal()">
+          OK
+        </button>
+</div>
+</div>
+<!-- Confirm Modal -->
+<div class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4" id="confirm-modal">
+<div class="bg-white rounded-lg max-w-sm w-full p-6 text-center">
+<h3 class="text-xl font-bold text-brown-dark mb-2">Confirmação</h3>
+<p class="text-gray-700 mb-4" id="confirm-modal-message">
+          Deseja confirmar?
+        </p>
+<div class="flex justify-center space-x-4">
+<button class="bg-gold text-white px-4 py-2 rounded hover:bg-yellow-600 font-semibold" id="confirm-yes">
+            Sim
+          </button>
+<button class="bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400 font-semibold" onclick="closeConfirmModal()">
+            Cancelar
+          </button>
+</div>
+</div>
+</div>
+
+</body>
+</html>

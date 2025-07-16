@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Gestão - EcoPantanal</title>
+    <link rel="stylesheet" href="../CSS/principal.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">🏨</div>
+                <div class="brand-text">
+                    <h1>ITAJU HOTEL</h1>
+                    <p>Sistema de Gestão</p>
+                </div>
+            </div>
+            <div class="user-info">
+                <span>Olá, Administrador</span>
+                <div class="user-avatar">👤</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="page-title">
+            <h2>Painel de Gestão</h2>
+            <p>Gerencie os quartos e serviços do hotel</p>
+        </div>
+
+        <!-- Estatísticas -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-icon rooms">🛏️</div>
+                    <div class="stat-info">
+                        <h3 id="ocupados-count">3/12</h3>
+                        <p>Quartos Ocupados</p>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="ocupacao-progress" style="width: 25%"></div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-icon guests">👥</div>
+                    <div class="stat-info">
+                        <h3 id="hospedes-count">10</h3>
+                        <p>Hóspedes</p>
+                    </div>
+                </div>
+                <div class="stat-extra">📈 12% em relação à semana passada</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-icon tours">🚤</div>
+                    <div class="stat-info">
+                        <h3 id="passeios-count">5</h3>
+                        <p>Passeios Hoje</p>
+                    </div>
+                </div>
+                <div class="stat-extra">3 trilhas, 2 barcos</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-icon orders">📝</div>
+                    <div class="stat-info">
+                        <h3 id="pedidos-count">7</h3>
+                        <p>Pedidos Pendentes</p>
+                    </div>
+                </div>
+                <div class="stat-extra">⚠️ 2 aguardando há mais de 15 min</div>
+            </div>
+        </div>
+
+        <!-- Controles -->
+        <div class="controls-section">
+            <div class="controls-grid">
+                <input type="text" id="searchInput" class="search-input" placeholder="🔍 Buscar quarto ou hóspede...">
+                <select id="statusFilter" class="control-select">
+                    <option value="">Todos os Status</option>
+                    <option value="Ocupado">Ocupado</option>
+                    <option value="Disponível">Disponível</option>
+                    <option value="Limpeza">Limpeza</option>
+                    <option value="Manutenção">Manutenção</option>
+                </select>
+                <button class="control-btn" onclick="aplicarFiltros()">🔧 Filtros</button>
+                <button class="control-btn" onclick="ordenarQuartos()">📊 Ordenar</button>
+                <button class="control-btn" id="btnAddRoom">➕ Adicionar Quarto</button>
+            </div>
+        </div>
+
+        <!-- Container de cadastro de quarto (inicialmente oculto) -->
+        <div id="addRoomContainer" class="add-room-container" style="display:none; margin: 20px 0;">
+            <form id="addRoomForm">
+                <h3>Cadastrar Novo Quarto</h3>
+                <div class="form-row">
+                    <input type="text" id="numeroQuarto" placeholder="Número do Quarto" required>
+                    <input type="text" id="suiteQuarto" placeholder="Nome da Suíte" required>
+                    <input type="number" id="capacidadeQuarto" placeholder="Capacidade" required>
+                    <input type="number" id="precoQuarto" placeholder="Preço da Diária" required step="0.01">
+                </div>
+                <div class="form-row">
+                    <input type="text" id="tipoQuarto" placeholder="Tipo do Quarto (ex: Luxo, Standard)">
+                    <input type="text" id="localizacaoQuarto" placeholder="Localização (opcional)">
+                </div>
+                <button type="submit" class="control-btn">Salvar Quarto</button>
+                <button type="button" class="control-btn" id="btnCancelarAddRoom">Cancelar</button>
+            </form>
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <span>Carregando dados...</span>
+        </div>
+
+        <!-- Grid de Quartos -->
+        <div class="rooms-grid" id="roomsContainer">
+            <!-- Os quartos serão carregados via JavaScript -->
+        </div>
+    </main>
+    <script src="../JAVASCRIPT/principal.js"></script>
+</body>
+</html>

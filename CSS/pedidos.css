@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-brown-dark {
+    background-color: #5A3A1E;
+  }
+
+  .text-brown-dark {
+    color: #5A3A1E;
+  }
+
+  .text-gold {
+    color: #D4A84F;
+  }
+
+  .bg-gold {
+    background-color: #D4A84F;
+  }
+
+  .bg-cream {
+    background-color: #FDF6E3;
+  }
+}
